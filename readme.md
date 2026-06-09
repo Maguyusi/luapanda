@@ -11,7 +11,7 @@ LuaPanda 是一个基于 VS Code 的 lua 代码工具，设计目标是简单易
 - 代码诊断（linting）：依赖 [luacheck](https://github.com/mpeterv/luacheck)
 - 调试器（debugger）
 
-功能详情可以参考[项目介绍](./Docs/Manual/feature-introduction.md)。LuaPanda 支持 lua5.1- 5.4，**调试器运行环境需要包含 luasocket**。
+功能详情可以参考[项目介绍](./Docs/Manual/feature-introduction.md)。LuaPanda 支持 lua5.1- 5.5，**调试器运行环境需要包含 luasocket**。
 
 
 
@@ -34,7 +34,7 @@ LuaPanda 是一个基于 VS Code 的 lua 代码工具，设计目标是简单易
 
 + 支持单步调试，断点调试，条件断点，协程调试
 
-+ 支持lua5.1 - 5.4,  win/mac 平台，支持 slua/xlua/slua-unreal 等框架
++ 支持lua5.1 - 5.5,  win/mac 平台，支持 slua/xlua/slua-unreal 等框架
 
 + 支持REPL :  在断点处可以监视和运行表达式，并返回执行结果
 

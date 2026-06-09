@@ -533,6 +533,8 @@ function this.doctor()
                     lua_ver = "501";
                 elseif _VERSION == "Lua 5.4" then
                     lua_ver = "504";
+                elseif _VERSION == "Lua 5.5" then
+                    lua_ver = "505";
                 else
                     lua_ver = "503";
                 end
@@ -1359,6 +1361,8 @@ function this.dataProcess( dataStr )
                     lua_ver = "501";
                 elseif _VERSION == "Lua 5.4" then
                     lua_ver = "504";
+                elseif _VERSION == "Lua 5.5" then
+                    lua_ver = "505";
                 else
                     lua_ver = "503";
                 end
@@ -3129,9 +3133,9 @@ function tools.show(t, name, indent)
             else
                cart = cart .. " = {\n"
                for k, v in pairs(value) do
-                  k = basicSerialize(k)
-                  local fname = string.format("%s[%s]", name, k)
-                  field = string.format("[%s]", k)
+                  local serializedKey = basicSerialize(k)
+                  local fname = string.format("%s[%s]", name, serializedKey)
+                  field = string.format("[%s]", serializedKey)
                   -- three spaces between levels
                   addtocart(v, fname, indent .. "   ", saved, field)
                end

@@ -6,6 +6,7 @@
 
 #include "libpdebug.h"
 #include <ctime>
+#include <cstring>
 #include <list>
 #include <map>
 #include <string>
