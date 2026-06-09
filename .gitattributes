@@ -1,2 +1,32 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# 对所有文件禁用换行符转换
+# * -text
+
+# 或者：指定特定文件类型保持原样
+# *.cpp -text
+# *.h -text
+# *.go -text
+# *.py -text
+# *.sh -text
+# *.bat -text
+
+# 如果需要对特定文件启用转换，可以单独指定
+# *.txt text=auto
+
+# 默认所有文件使用 LF 换行符
+* text=auto eol=lf
+
+# .bat 文件使用 CRLF 换行符（Windows 批处理文件需要）
+*.bat text eol=crlf
+
+# 二进制文件（确保不被当作文本处理）
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.tar.gz binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
