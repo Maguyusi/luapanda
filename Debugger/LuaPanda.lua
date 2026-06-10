@@ -1573,8 +1573,9 @@ function this.receiveMessage( timeoutSec )
     local response, err = sock:receive("*l");
     if response == nil then
         if err == "closed" then
-            this.printToConsole("[debugger error]接收信息失败  |  reason:"..err, 2);
             this.disconnect();
+        elseif err ~= "timeout" and err ~= nil then
+            this.printToConsole("[debugger warning]接收信息失败  |  reason:"..tostring(err), 1);
         end
         return false;
     else
